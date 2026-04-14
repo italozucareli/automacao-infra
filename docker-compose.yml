@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+  te-agent:
+    image: thousandeyes/enterprise-agent:latest
+    container_name: te-agent-alpine
+    hostname: te-agent-alpine-01
+    restart: always
+    environment:
+      - TEAGENT_ACCOUNT_TOKEN=COLE_SEU_TOKEN_AQUI
+    # Descomente as linhas abaixo e coloque seu DNS se o Docker forçar o uso do 8.8.8.8
+    # dns:
+    #   - 10.0.0.50
+    #   - 10.0.0.51
+    mem_limit: 2g
+    memswap_limit: 2g
