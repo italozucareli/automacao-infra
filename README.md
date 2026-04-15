@@ -96,7 +96,8 @@ Scripts desenhados para Provedores de Serviços Gerenciados (MSSP) e Infraestrut
 A maioria das automações utiliza Python 3.8+. Recomenda-se criar um ambiente virtual (`venv`) e instalar as dependências:
 ```bash
 pip install requests elasticsearch opentelemetry-api opentelemetry-sdk boto3
-Autenticação (OAuth Bearer Token)
+
+### Autenticação (OAuth Bearer Token)
 Os scripts que interagem com a API Restful da ThousandEyes (v7) exigem um token de autenticação.
 
 Acesse o portal ThousandEyes.
