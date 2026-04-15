@@ -95,8 +95,8 @@ Scripts desenhados para Provedores de Serviços Gerenciados (MSSP) e Infraestrut
 ### Dependências (Python)
 A maioria das automações utiliza Python 3.8+. Recomenda-se criar um ambiente virtual (`venv`) e instalar as dependências:
 
-bash
-pip install requests elasticsearch opentelemetry-api opentelemetry-sdk boto3
+'bash
+pip install requests elasticsearch opentelemetry-api opentelemetry-sdk boto3'
 
 ### Autenticação (OAuth Bearer Token)
 Os scripts que interagem com a API Restful da ThousandEyes (v7) exigem um token de autenticação.
@@ -114,8 +114,8 @@ Recomendação de Segurança: Em ambientes de produção, não deixe o token har
 ### Execução de Scripts PowerShell
 Caso o Windows bloqueie a execução de scripts .ps1 locais por políticas restritivas, inicie o PowerShell como Administrador e execute:
 
-PowerShell
-Set-ExecutionPolicy Bypass -Scope Process -Force
+'PowerShell
+Set-ExecutionPolicy Bypass -Scope Process -Force'
 
 ### ⚖️ Aviso Legal (Disclaimer)
 Este é um repositório independente. Os scripts fornecidos aqui são ferramentas operacionais disponibilizadas "as is" (no estado em que se encontram).
