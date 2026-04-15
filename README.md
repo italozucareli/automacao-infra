@@ -84,7 +84,8 @@ chmod +x nome-do-script.sh
 ### Para scripts PowerShell (.ps1):
 Caso encontre bloqueios de execução no Windows, abra o PowerShell como Administrador e libere a execução temporária:
 
+PowerShell
 Set-ExecutionPolicy Bypass -Scope Process
 
 ⚠️ Aviso Legal
-Estes scripts são fornecidos "como estão" (as-is), sem garantias de qualquer tipo. Sempre revise o código e teste em ambientes de homologação (Non-Prod) antes de aplicar em sua infraestrutura de Produção, especialmente os scripts que realizam exclusões (DELETE) ou alterações em massa.
+Estes scripts são fornecidos as-is, sem garantias de qualquer tipo. Sempre revise o código e teste em ambientes de homologação (Non-Prod) antes de aplicar em sua infraestrutura de Produção, especialmente os scripts que realizam exclusões (DELETE) ou alterações em massa.
