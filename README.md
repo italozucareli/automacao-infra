@@ -94,7 +94,8 @@ Scripts desenhados para Provedores de Serviços Gerenciados (MSSP) e Infraestrut
 
 ### Dependências (Python)
 A maioria das automações utiliza Python 3.8+. Recomenda-se criar um ambiente virtual (`venv`) e instalar as dependências:
-```bash
+
+bash
 pip install requests elasticsearch opentelemetry-api opentelemetry-sdk boto3
 
 ### Autenticação (OAuth Bearer Token)
@@ -110,14 +111,14 @@ Insira este token na variável TE_API_TOKEN (ou TE_TOKEN) localizada no cabeçal
 
 Recomendação de Segurança: Em ambientes de produção, não deixe o token hardcoded no script. Utilize cofres de senhas, HashiCorp Vault ou variáveis de ambiente do SO (os.environ).
 
-Execução de Scripts PowerShell
+### Execução de Scripts PowerShell
 Caso o Windows bloqueie a execução de scripts .ps1 locais por políticas restritivas, inicie o PowerShell como Administrador e execute:
 
 PowerShell
 Set-ExecutionPolicy Bypass -Scope Process -Force
 
-⚖️ Aviso Legal (Disclaimer)
+### ⚖️ Aviso Legal (Disclaimer)
 Este é um repositório independente. Os scripts fornecidos aqui são ferramentas operacionais disponibilizadas "as is" (no estado em que se encontram).
 Sempre revise o código fonte e execute testes preliminares em um ambiente de Homologação (Non-Prod) antes de aplicar em seu ambiente de Produção — especialmente os scripts que envolvem os métodos POST, PUT ou DELETE na API.
 
-💡 Desenvolvido com o foco em transformar a visibilidade de redes em inteligência de negócios contínua.
+### 💡 Desenvolvido com o foco em transformar a visibilidade de redes em inteligência de negócios contínua.
