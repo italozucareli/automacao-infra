@@ -1,0 +1,37 @@
+---
+- name: Instalar ThousandEyes Enterprise Agent em Massa
+  hosts: all
+  become: yes
+  vars:
+    te_token: "SEU_ACCOUNT_GROUP_TOKEN"
+
+  tasks:
+    - name: Adicionar chave GPG do ThousandEyes
+      apt_key:
+        url: https://files.thousandeyes.com/thousandeyes-apt-key.pub
+        state: present
+
+    - name: Adicionar repositório
+      apt_repository:
+        repo: "deb https://apt.thousandeyes.com/ {{ ansible_distribution_release }} main"
+        state: present
+
+    - name: Instalar te-agent e browserbot
+      apt:
+        name: 
+          - thousandeyes-enterprise-agent
+          - thousandeyes-browserbot
+        update_cache: yes
+
+    - name: Configurar o Account Token
+      lineinfile:
+        path: /etc/te-agent/te-agent.cfg
+        regexp: '^account-token='
+        line: "account-token={{ te_token }}"
+      notify: restart te-agent
+
+  handlers:
+    - name: restart te-agent
+      service:
+        name: te-agent
+        state: restarted
