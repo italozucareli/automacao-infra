@@ -113,11 +113,10 @@ Security Best Practice: In production environments, never leave the token hardco
 PowerShell Script Execution
 If Windows blocks the execution of local `.ps1` scripts due to restrictive execution policies, open PowerShell as an Administrator and run:
 
-powershell
 `Set-ExecutionPolicy Bypass -Scope Process -Force`
 
 ### ⚖️ Disclaimer
 This is an independent repository. The scripts provided here are operational tools made available "as is", without any warranties of any kind.
 Always review the source code and perform preliminary tests in a Staging/Non-Prod environment before applying them to your Production infrastructure—especially scripts involving `POST`, `PUT`, or `DELETE` API methods.
 
-## 💡 Developed with the goal of transforming network visibility into continuous business intelligence.
+#### 💡 Developed with the goal of transforming network visibility into continuous business intelligence.
