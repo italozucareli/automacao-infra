@@ -43,7 +43,9 @@ Connecting ThousandEyes network data to the enterprise ecosystem.
 
 ### 3. ⚙️ NOC & Operations Automation (`/03_noc_automation`)
 Incident response acceleration and platform management.
-* `te-alert-to-teams.py` / `te-to-webex-teams.py` - ChatOps integration for MS Teams and Webex incident routing.
+* `get-te-alerts.py` - Quick CLI query for active network alerts without opening the portal.
+* `te-alert-to-teams.py` - ChatOps integration for MS Teams incident routing.
+* `te-to-webex-teams.py` - ChatOps integration for native Webex Teams incident routing.
 * `te-slack-daily-report.py` - Daily Digest (Daily Performance Summary) generation in Slack.
 * `te-maintenance-mode.py` - Pauses and resumes tests during DC maintenance windows.
 * `te-zabbix-maintenance-sync.py` - Automated maintenance sync between Zabbix and ThousandEyes.
@@ -55,6 +57,7 @@ Incident response acceleration and platform management.
 * `te-bulk-delete-tests.py` - Mass deletion of obsolete tests based on `.txt` files.
 * `te-create-http-test.py` - Automated provisioning of new application tests.
 * `te-create-share-link.py` - Public share link generation for ISP escalation.
+* `te-cicd-gatekeeper.sh` - CI/CD pipeline validator that blocks deployments if network anomalies are detected.
 
 ### 4. 📊 Auditing, Reports & FinOps (`/04_audit_reports_finops`)
 Governance, waste reduction, and executive visibility.
@@ -66,6 +69,7 @@ Governance, waste reduction, and executive visibility.
 * `te-generate-statuspage.py` - Static HTML generator for public corporate status pages.
 * `check-te-platform-status.py` - Meta-monitoring of ThousandEyes' own public health API.
 * `te-top5-latency.py` - Interactive CLI dashboard of Agents with the worst current latencies.
+* `te-collect-logs.ps1` - Automated local log collector and zipping tool for Endpoint Agents.
 
 ### 5. 🛡️ SecOps, Endpoint & Routing (`/05_secops_routing`)
 Advanced Digital Experience Monitoring (DEM), BGP, and Security.
