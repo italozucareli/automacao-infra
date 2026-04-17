@@ -1,4 +1,3 @@
-Markdown
 # 👁️ ThousandEyes Advanced Observability & SRE Toolkit
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg?logo=python&logoColor=white)
@@ -96,7 +95,6 @@ Scripts designed for Managed Service Providers (MSSP) and Infrastructure as Code
 ### Python Dependencies
 Most automations require Python 3.8+. It is recommended to create a virtual environment (`venv`) and install the following dependencies:
 
-bash
 `pip install requests elasticsearch opentelemetry-api opentelemetry-sdk boto3`
 
 Authentication (OAuth Bearer Token)
@@ -113,13 +111,13 @@ Insert this token into the TE_API_TOKEN (or TE_TOKEN) variable located at the to
 Security Best Practice: In production environments, never leave the token hardcoded in the script. Use password vaults, HashiCorp Vault, or OS environment variables (os.environ).
 
 PowerShell Script Execution
-If Windows blocks the execution of local .ps1 scripts due to restrictive execution policies, open PowerShell as an Administrator and run:
+If Windows blocks the execution of local `.ps1` scripts due to restrictive execution policies, open PowerShell as an Administrator and run:
 
-PowerShell
+powershell
 `Set-ExecutionPolicy Bypass -Scope Process -Force`
 
-⚖️ Disclaimer
+### ⚖️ Disclaimer
 This is an independent repository. The scripts provided here are operational tools made available "as is", without any warranties of any kind.
 Always review the source code and perform preliminary tests in a Staging/Non-Prod environment before applying them to your Production infrastructure—especially scripts involving `POST`, `PUT`, or `DELETE` API methods.
 
-💡 Developed with the goal of transforming network visibility into continuous business intelligence.
+## 💡 Developed with the goal of transforming network visibility into continuous business intelligence.
